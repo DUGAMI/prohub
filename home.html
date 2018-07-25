@@ -1,0 +1,317 @@
+﻿{% import "bootstrap/wtf.html" as wtf %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet">
+<style>
+article,aside,footer,header,section,footer,nav,figure,main{display:block;}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #5e2e2e;  
+  background-size: cover;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+}
+.top-header{
+    margin: 10px 0;
+    height: 120px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  font-size:45px;
+}
+.tea-logo{
+    float: left;
+}
+main{
+    background: #eeeeee url(images/bg.gif) top left;
+    padding: 20px;
+    margin-left: 360px;
+	border-radius: 5px;
+	box-shadow: 3px 3px #AAA;	
+}
+
+main article{
+    border-bottom: 1px dashed #C8B99C;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+main .last-article{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+main article h3{
+    color: #A78560;
+    font-size: 1.2em;
+	font-weight: bold;
+    margin-bottom: 10px;	
+}
+
+main article time{
+    color: #929B8D;
+}
+
+main article p{
+    line-height: 1.5em;
+    text-indent: 30px;
+    margin: 10px 0;
+}
+
+main article footer{
+    color: #929B8D;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+main ol{
+	margin-left:50px;
+}
+
+main li{
+	line-height:1.5em;
+}
+.page-footer{
+    clear: both;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #4F3115;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 90%;
+}
+
+
+.category{
+	margin-left:0;
+}
+
+.category article h3{
+    color: #BE5C56;
+	text-align:center;
+	font-size:30px;
+}
+
+.category article{
+	border-color:#BE5C56;
+}
+
+
+.method{
+	margin-left:0;
+}
+
+.method article h3{
+    color: #4B7AA3;
+}
+
+.method article{
+	border-color:#4B7AA3;
+}
+#with
+{width:1000px;
+margin:0 auto;}
+.aimg
+{margin-left:225px;
+}
+.teas{
+	border-radius: 5px;
+	box-shadow: 3px 3px #AAA;
+	}
+.teas figure{
+    float: left;
+	transition: transform 1.5s;
+}
+
+.teas figure:hover{	
+	transform: scale(1.6);
+}
+.teas .figure{
+    margin-left: 15px;
+}
+
+.teas figure img{
+    width: 230px;
+    height: 200px;
+    border: 2px solid #ffffff;
+	
+}
+.bimg
+{margin-top:-19px;}
+.teas figcaption{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.clear{
+    clear: both;
+}
+.aimg
+{margin-left:180px;}
+main.form{
+    margin-left: 0;
+	line-height: 1.5em;
+}
+
+main.form h3 {
+    color: #A78560;
+    font-size: 1.2em;
+	font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main.form p {
+	margin: 0 0 15px 0;
+}
+
+main.form form {
+    padding: 10px;
+	
+}
+main.form form fieldset {
+	padding:15px;
+	border-radius:10px;
+	width:700px;
+	margin: 0 auto;
+}
+	
+main.form form legend {
+	color: #4B7AA3;
+	font-weight: bold;
+	font-size: 16px;
+}
+	
+main.form form .left{
+	width: 120px;
+	height:25px;
+	float: left;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: right;
+	margin:0 15px;
+	background-color: #fff;
+	padding: 0px 10px;
+	border: 1px solid  #a78560;
+	border-radius: 3px;
+	color: #000000;		
+ }
+main.form span.red{
+	color: red;	
+	font-weight: bold;
+	}
+main.form form .right {
+	width:250px;
+	height:20px;
+	text-align:center;
+	margin-bottom:5px;	
+}
+main.form form .btn {
+	width: 65px;
+	height: 30px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #AAA;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFF;
+	background-color:  #a78560;
+	margin: 10px 10px 0px 250px;
+}
+
+main.form form textarea {
+    width: 500px;
+	height: 250px;
+}
+#div{margin:10px auto;
+	width:384px;
+	height:240px;
+	background:url(%E4%B8%AD%E5%9B%BD/1.jpg) no-repeat;
+	-webkit-animation:myimg 5s linear infinite alternate;
+	animation:myimg 10s ease-in infinite alternate;}
+
+@-webkit-keyframes myimg{
+	0%{ background:url(%E4%B8%AD%E5%9B%BD/1.jpg) no-repeat;}
+	25%{background:url(%E4%B8%AD%E5%9B%BD/6.jpg) no-repeat;}
+	50%{background:url(%E4%B8%AD%E5%9B%BD/7.jpg) no-repeat;}
+	75%{background:url(%E4%B8%AD%E5%9B%BD/8.jpg)no-repeat;}
+	100%{background:url(%E4%B8%AD%E5%9B%BD/9.jpg) no-repeat;}
+	}
+@keyframes myimg{
+	0%{ background:url(%E4%B8%AD%E5%9B%BD/1.jpg) no-repeat;}
+	25%{background:url(%E4%B8%AD%E5%9B%BD/6.jpg) no-repeat;}
+	50%{background:url(%E4%B8%AD%E5%9B%BD/7.jpg) no-repeat;}
+	75%{background:url(%E4%B8%AD%E5%9B%BD/8.jpg) no-repeat;}
+	100%{background:url(%E4%B8%AD%E5%9B%BD/9.jpg) no-repeat;}
+	}
+
+</style>
+</head>
+
+<body>
+<div id="with">
+    <main class="form">
+    <a href="index.html">返回主页</a>
+        <h3>会员申请表</h3>
+        <p>欢迎您申请会员卡，申请过程将不会收取您任何费用。我们承诺保护您的信息安全,不会将它提供给任何第三方。</p>
+        <p>注：<span class="red">*</span> 为必填内容</p>
+        <form method="POST">  
+        {{ form.csrf_token }}
+            <fieldset>
+            	<legend>账号信息</legend>               
+                <label for="email" class="left"> 邮&nbsp;&nbsp;箱<span class="red">*</span></label>
+				{{ form.email }}<br><br>
+				
+                <label for="pw1" class="left"> 密&nbsp;&nbsp;码<span class="red">*</span></label>
+                {{ form.password }}<br><br> 
+                  
+                <label for="pw2" class="left"> 确认密码<span class="red">*</span></label>
+                {{ form.confirm }}<br>
+                
+        	</fieldset>
+            
+             <fieldset>
+             	<legend>服务条款</legend>
+		   		<label for="yes" class="left"> 是否同意条款<span class="red">*</span></label>	      
+	      		<textarea name="terms" cols="60" rows="3" readonly>
+ 一、总则
+                
+1．1　用户应当同意本协议的条款并按照页面上的提示完成全部的注册程序。用户在进行注册程序过程中阅读并同意以下条款即表示用户 与公司达成协议，完全接受本协议项下的全部条款。
+1．2　用户注册成功后,我们将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+    您在使本网站提供的各项服务之前，应仔细阅读本服务协议。如您不同意本服务协议及/或随时对其的修改，您可以主动取消本网站提供的服务；您一旦使用本网站服务，即视为您已了解并完全同意本服务协议各项内容，包括本网站对服务协议随时所做的任何修改，并成为本网站用户。
+                
+二、注册信息和隐私保护
+                
+ 2．1　本网站帐号的所有权归本网站，用户完成注册申请手续后，获得本网站帐号的使用权。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。如果因注册信息不真实而引起的问题，并对问题发生所带来的后果，本网站·不负任何责任。
+2．2　用户不应将其帐号、密码转让或出借予他人使用。如用户发现其帐号遭他人非法使用，应立即通知客服。因黑客行为或用户的保管疏忽导致帐号、密码遭他人非法使用，本网站不承担任何责任。
+ 2．3　本网站不对外公开或向第三方提供单个用户的注册资料，除非：
+（1）事先获得用户的明确授权；
+（2）只有透露你的个人资料，才能提供你所要求的产品和服务；
+（3）根据有关的法律法规要求；
+（4）按照相关政府主管部门的要求；
+（5）为维护本网站的合法权益。
+ 2．4　在你注册本网站帐户，使用产品或服务，访问世界旅游网网页, 或参加促销和有奖游戏时，本网站会收集你的个人身份识别资料，并会将这些资料用于：改进为你提供的服务及网页内容。
+           		</textarea>	    
+              <div align="center">
+              <input name="yes" type="checkbox" id="yes" /> <label for="yes"> 已阅读并同意上述条款</label>
+              </div>			
+	    	</fieldset>           
+            <div align="center">
+			{{ wtf.form_field(form.submit) }}
+			</div>
+  	    </form>
+    </main>
+    </div>
+</body>
+</html>
