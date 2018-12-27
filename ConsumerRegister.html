@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="/jquery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<ul class="navbar-nav ml-mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="homepage.php">首页</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">购物车</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="order.php">已购买</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">管理员</a>
+				</li>
+
+
+			</ul>
+		</nav>
+
+		<br>
+		<div class="form-control" style="margin-left:auto;margin-right:auto;width:500px">
+			<h1>请输入您的基本信息</h1>
+				<form action="Insert.php" method="POST" >
+					姓名:<input type="text" class="form-control" name="CName">
+					性别:<input type="text" class="form-control" name="CSex">
+					电话:<input type="text" class="form-control" name="CTele">
+					生日:<input type="text" class="form-control" name="CBirth">
+					电子邮箱:<input type="text" class="form-control" name="CEmail">
+					地址:<input type="text" class="form-control" name="CAdress">
+					账号:<input type="text" class="form-control" name="CId">
+					用户名:<input type="text" class="form-control" name="CLogName">
+					<br><input class="btn btn-primary" type="submit">
+				</form>
+		</div>
+	<body>
+</html>
